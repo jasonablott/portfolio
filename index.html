@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">JA<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Jason Ablott<span class="accent">.</span></h1>
+      <p class="hero-title">Software Engineer</p>
+      <p class="hero-description">
+        I believe in the power of code to make the world a better place. 
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-decoration" aria-hidden="true">
+      <div class="hero-grid"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">01 / About</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title">A little about me</h2>
+          <p>
+            I'm a software engineer with a passion for building things that are both functional and usable.
+            I care deeply about code quality, user experience, and writing software with longevity.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring the great outdoors.
+          </p>
+          <a href="#" class="btn btn-outline">Download CV</a>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">1+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">A Lot</span>
+            <span class="stat-label">Cups of Coffee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">02 / Projects</span>
+      </div>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-subtitle">Projects will be added here soon.</p>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project cards will go here -->
+        <div class="project-placeholder">
+          <span class="mono">// coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">03 / Skills</span>
+      </div>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3 class="skill-group-title">Languages</h3>
+          <ul class="skill-list">
+            <li class="skill-tag">C++</li>
+            <li class="skill-tag">C#</li>
+            <li class="skill-tag">Java</li>
+            <li class="skill-tag">Python</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container container-narrow">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">04 / Contact</span>
+      </div>
+      <h2 class="section-title">Let's Talk</h2>
+      <p class="section-subtitle">
+        Send me a message!
+      </p>
+      <a href="mailto:uintasoftware@gmail.com" class="btn btn-primary btn-large">Say Hello</a>
+      <div class="social-links">
+        <a href="https://github.com/jasonablott/portfolio" class="social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/jasonablott" class="social-link">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <span class="mono">Designed & Built by Jason Ablott</span>
+      <span class="mono footer-year" id="footerYear"></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
