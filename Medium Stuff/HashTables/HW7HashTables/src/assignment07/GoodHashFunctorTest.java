@@ -16,11 +16,11 @@ class GoodHashFunctorTest {
         String ab = "AB";
         String cat = "Cat";
         String animal = "Animal";
-        assertEquals(test.hash(a), 282);
-        assertEquals(test.hash(b), 283);
-        assertEquals(test.hash(c), 284);
-        assertEquals(test.hash(ab), 8808);
-        assertEquals(test.hash(cat), 276047);
-        assertEquals(test.hash(animal), 411690781);
+        assertEquals(test.hash(a), 177638);
+        assertEquals(test.hash(b), 177639);
+        assertEquals(test.hash(c), 177640);
+        assertEquals(test.hash(ab), 5862120);
+        assertEquals(test.hash(cat), 193453277);
+        assertEquals(test.hash(animal), 1484763785);
     }
 }

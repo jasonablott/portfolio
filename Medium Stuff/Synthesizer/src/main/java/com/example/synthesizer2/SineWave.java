@@ -1,4 +1,6 @@
-package com.example.synthesizer;
+package com.example.synthesizer2;
+import java.lang.Math;
+import static java.lang.Math.sin;
 
 /*
 With the  AudioComponent interface defined, we can make a concrete AudioComponent, meaning a class that implements the
@@ -7,14 +9,21 @@ containing a sine wave.
 */
 
 public class SineWave implements AudioComponent {
+
+
+    public int frequency;
+
+
     @Override
     public AudioClip getClip() {
         // create and fill in an AudioClip with sample values from a sine wave. The math isn't too
-        // ugly. In pseudocode:
-        // sample[ i ] = maxValue * sine( 2*pi*frequency * i / sampleRate );
-        // Note: for testing, a frequency of 440 is the "A" (note) frequency that most orchestras tune to, so it's a good test.
-        // maxValue controls the "loudness" of your sine wave. Setting this to Short.Max would make it as loud as possible.
-        return null;
+        AudioClip sineWave = new AudioClip();
+        for (int i = 0; i < sineWave.audioData.length / 2; i++) {
+            int maxValue = sineWave.MaxValue;
+            int sampleValue = (int) (maxValue * sin((2 * Math.PI * frequency * i / AudioClip.sampleRate)));
+            sineWave.setSample(i, sampleValue);
+        }
+        return sineWave;
     }
 
     @Override
@@ -26,12 +35,18 @@ public class SineWave implements AudioComponent {
     @Override
     public void connectInput(AudioComponent input) {
         // define method here
+        assert false;
+    }
+
+    @Override
+    public void removeInput(AudioComponent ac) {
+
     }
 
     // This class should take the desired frequency (pitch) as a constructor parameter (you'll eventually want getters and
     // setters for the frequency as well, but we'll save that for later).
 
     SineWave(int frequency) {
-        // define constructor here
+        this.frequency = frequency;
     }
 }

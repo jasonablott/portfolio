@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>Synthesizer</artifactId>
+    <artifactId>Synthesizer2</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Synthesizer</name>
+    <name>Synthesizer2</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,12 +18,12 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.6</version>
+            <version>21.0.4</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.6</version>
+            <version>21.0.4</version>
         </dependency>
 
         <dependency>
@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.synthesizer/com.example.synthesizer.HelloApplication</mainClass>
+                            <mainClass>com.example.synthesizer2/com.example.synthesizer2.SynthesizeApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

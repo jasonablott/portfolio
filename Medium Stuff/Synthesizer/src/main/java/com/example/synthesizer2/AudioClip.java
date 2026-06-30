@@ -1,4 +1,4 @@
-package com.example.synthesizer;
+package com.example.synthesizer2;
 
 import java.util.Arrays;
 
@@ -12,12 +12,15 @@ public class AudioClip {
 
 
     // static constant for the duration (2.0 seconds)
-    static final double duration = 2.0;
+    public static final double duration = 2.0;
     // static constant for sample rate (44100)
-    static final int sampleRate = 44100;
+    public static final int sampleRate = 44100;
+    public static final int TOTAL_SAMPLES = (int)(duration * sampleRate);
+    public final int MaxValue = 15000;
+    public final int MinValue = -15000;
 
     // member variable that contains the actual byte array of bytes over time
-    byte [] audioData = new byte[sampleRate * (int)duration];
+    byte [] audioData = new byte[sampleRate * (int)duration * 2];
 
 
     // Methods
