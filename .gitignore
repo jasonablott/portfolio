@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Model weights and large files
+Bigish Stuff/LlmMicroservice/mlserver/model_weights/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+venv/
+*.egg-info/
+
+# Java
+*.class
+*.jar
+!SimpleCalcServer.jar
+
+# C++
+*.o
+*.out
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+cmake-build-debug/
+cmake-build-release/
+
+# Node
+node_modules/
