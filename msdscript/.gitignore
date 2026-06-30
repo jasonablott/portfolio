@@ -1,0 +1,11 @@
+# Ignore all object files
+*.o
+
+# Ignore CMake build files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+*.zip
+*.idea

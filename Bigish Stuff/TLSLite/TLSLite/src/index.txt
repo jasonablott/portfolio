@@ -1,0 +1,2 @@
+V	260318171108Z		1000	unknown	/C=US/ST=UT/O=MyCA/OU=6014/CN=Server/emailAddress=MyCA@example.com
+V	260318171155Z		1001	unknown	/C=US/ST=UT/O=MyCA/OU=6014/CN=Client/emailAddress=MyCA@example.com

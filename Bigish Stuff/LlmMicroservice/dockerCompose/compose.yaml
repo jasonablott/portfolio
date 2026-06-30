@@ -1,0 +1,130 @@
+services:
+
+  #######################################################################################################
+  # identity_provider:                                                                                  #
+  #   image: keycloak/keycloak                                                                          #
+  #                                                                                                     #
+  #   ports:                                                                                            #
+  #     - "8080:8080"                                                                                   #
+  #                                                                                                     #
+  #   command: start-dev --verbose --import-realm                                                       #
+  #                                                                                                     #
+  #   environment:                                                                                      #
+  #      - KC_BOOTSTRAP_ADMIN_USERNAME=masteradmin                                                      #
+  #      - KC_BOOTSTRAP_ADMIN_PASSWORD=c77d15177630b06a1707cc394133e4b79bb19c1ec7b131169d918c46018f206b #
+  #                                                                                                     #
+  #   volumes:                                                                                          #
+  #      - ./demo-realm.json:/opt/keycloak/data/import/demo-realm.json:ro                               #
+  #                                                                                                     #
+  #   hostname: "keycloak.local"                                                                        #
+  #######################################################################################################
+  # using openLDAP instead, this is a more comprehensive identity provider
+
+  ## this image has been removed in the 2 days between class and the assignment being released...
+  
+  
+  # ldap:
+  #   image: bitnami/openldap:latest
+
+  #   hostname: "ldap.asd.msd.localhost"
+
+  #   ports:
+  #     - "8389:1389"
+  #     - "8636:1636"
+      
+  #   environment:
+  #     - LDAP_ROOT=dc=ldap,dc=asd,dc=msd,dc=localhost
+  #     - LDAP_ADMIN_USERNAME=admin
+  #     - LDAP_ADMIN_PASSWORD=shouldntMatter
+  #     - LDAP_LOGLEVEL=320
+
+  #   networks:
+  #     backend:
+  #       aliases:
+  #         - ldap.asd.msd.localhost
+
+
+  ldap:
+    image: osixia/openldap:latest
+    
+    hostname: "ldap.asd.msd.localhost"
+    
+    ports:
+      - "8389:389"
+      - "8636:636"
+      
+    environment:
+      - LDAP_ORGANIZATION=msdAsd
+      - LDAP_DOMAIN=ldap.asd.msd.localhost
+      - LDAP_ADMIN_PASSWORD=shouldntMatter
+      - LDAP_LOG_LEVEL=320
+      - LDAP_TLS=false
+
+    command: "--loglevel debug"
+      
+    networks:
+      - public
+      - backend
+      
+    volumes:
+      - ldap-data:/var/lib/ldap
+      - ldap-config:/etc/ldap/slapd.d
+
+
+  notes-app-server:
+    image: notes-app-ldap:latest
+    platform: linux/amd64
+    depends_on:
+      - ldap
+
+    ports:
+      - "8080:8080"
+    hostname: "api.asd.msd.localhost"
+
+    environment:
+      - SECRET=useSomethingBetter
+
+    networks:
+      - backend # talk to ldap
+      - public # talk to the world
+      
+    volumes:
+    - notes-uploads:/uploads
+    - notes-meta:/data
+    
+  
+  # Added for A7 to run the llm server
+  mlserver:
+    build:
+        context: ../mlserver
+        dockerfile: Dockerfile
+    container_name: mlserver
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+    depends_on:
+      - notes-app-server
+
+
+  # alpine:
+  #   image: ubuntu:latest
+  #   command: /bin/sh
+  #   stdin_open: true # docker run -i
+  #   tty: true   
+  #   networks:
+  #     - backend
+
+networks:
+  public:
+    driver: bridge
+    
+  backend:
+    driver: bridge
+    internal: true
+    
+volumes:
+    ldap-data:
+    ldap-config:
+    notes-uploads:
+    notes-meta:

@@ -1,0 +1,16 @@
+total 78520
+-rw-r--r--@ 1 jasonablott  staff       154 Feb  5 10:26 CMakeLists.txt
+-rwxr-xr-x  1 jasonablott  staff    275368 Feb 13 15:56 JShell
+drwxr-xr-x@ 8 jasonablott  staff       256 Feb  5 14:16 cmake-build-debug
+-rw-r--r--@ 1 jasonablott  staff      9008 Feb 13 15:55 main.cpp
+-rw-r--r--  1 jasonablott  staff    484656 Feb 13 15:56 main.o
+-rw-r--r--@ 1 jasonablott  staff       680 Feb 10 07:23 makefile
+-rw-r--r--  1 jasonablott  staff         0 Feb 13 15:56 nl
+-rw-r--r--@ 1 jasonablott  staff  38888896 Feb 13 09:25 numbers.txt
+-rw-r--r--@ 1 jasonablott  staff      9385 Feb 13 15:42 shelpers.cpp
+-rw-r--r--@ 1 jasonablott  staff      2521 Feb  5 13:54 shelpers.h
+-rw-r--r--  1 jasonablott  staff    451888 Feb 13 15:56 shelpers.o
+-rw-r--r--@ 1 jasonablott  staff         6 Feb 13 15:39 someFile.txt
+-rw-r--r--  1 jasonablott  staff         0 Feb 13 15:18 ten_lines.txt
+-rwxr-xr-x  1 jasonablott  staff     42328 Feb 10 12:13 test
+-rw-r--r--@ 1 jasonablott  staff       721 Feb 10 10:27 test.cpp

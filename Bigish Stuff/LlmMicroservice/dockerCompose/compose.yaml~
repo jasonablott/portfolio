@@ -1,0 +1,42 @@
+services:
+
+  #######################################################################################################
+  # identity_provider:                                                                                  #
+  #   image: keycloak/keycloak                                                                          #
+  #                                                                                                     #
+  #   ports:                                                                                            #
+  #     - "8080:8080"                                                                                   #
+  #                                                                                                     #
+  #   command: start-dev --verbose --import-realm                                                       #
+  #                                                                                                     #
+  #   environment:                                                                                      #
+  #      - KC_BOOTSTRAP_ADMIN_USERNAME=masteradmin                                                      #
+  #      - KC_BOOTSTRAP_ADMIN_PASSWORD=c77d15177630b06a1707cc394133e4b79bb19c1ec7b131169d918c46018f206b #
+  #                                                                                                     #
+  #   volumes:                                                                                          #
+  #      - ./demo-realm.json:/opt/keycloak/data/import/demo-realm.json:ro                               #
+  #                                                                                                     #
+  #   hostname: "keycloak.local"                                                                        #
+  #######################################################################################################
+  # using openLDAP instead, this is a more comprehensive identity provider
+
+  ldap:
+    image: osixia/openldap:latest
+
+    hostname: "ldap.asd.msd.localhost"
+
+    ports:
+      - "8389:389"
+      - "8636:636"
+    
+    volumes:
+      - ./ldap-environment:/container/environment/01-custom
+
+  notes-app-server:
+    image: notes-app-oauth:latest
+    depends_on:
+      - ldap
+
+    ports:
+      - "9000:8080"
+    hostname: "api.asd.msd.localhost"

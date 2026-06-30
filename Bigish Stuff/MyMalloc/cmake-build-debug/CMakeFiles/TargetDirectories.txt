@@ -1,0 +1,3 @@
+/Users/jasonablott/MSD/6013Systems/A4Malloc/cmake-build-debug/CMakeFiles/A4Malloc.dir
+/Users/jasonablott/MSD/6013Systems/A4Malloc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jasonablott/MSD/6013Systems/A4Malloc/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,130 @@
+\begin{theindex}
+
+  \item {Add}, \hyperpage{9}
+    \subitem {Add}, \hyperpage{10}
+    \subitem {equals}, \hyperpage{10}
+    \subitem {has\_variable}, \hyperpage{10}
+    \subitem {interp}, \hyperpage{11}
+    \subitem {lhs}, \hyperpage{12}
+    \subitem {prettyPrint}, \hyperpage{11}
+    \subitem {prettyPrintAt}, \hyperpage{11}
+    \subitem {print}, \hyperpage{11}
+    \subitem {subst}, \hyperpage{12}
+
+  \indexspace
+
+  \item {equals}
+    \subitem {Add}, \hyperpage{10}
+    \subitem {Expr}, \hyperpage{13}
+    \subitem {Mult}, \hyperpage{17}
+    \subitem {Num}, \hyperpage{21}
+    \subitem {Variable}, \hyperpage{24}
+  \item {Expr}, \hyperpage{12}
+    \subitem {equals}, \hyperpage{13}
+    \subitem {has\_variable}, \hyperpage{13}
+    \subitem {interp}, \hyperpage{14}
+    \subitem {prettyPrint}, \hyperpage{14}
+    \subitem {prettyPrintAt}, \hyperpage{14}
+    \subitem {print}, \hyperpage{14}
+    \subitem {subst}, \hyperpage{15}
+    \subitem {to\_pretty\_string}, \hyperpage{15}
+    \subitem {to\_string}, \hyperpage{15}
+
+  \indexspace
+
+  \item {has\_variable}
+    \subitem {Add}, \hyperpage{10}
+    \subitem {Expr}, \hyperpage{13}
+    \subitem {Mult}, \hyperpage{17}
+    \subitem {Num}, \hyperpage{22}
+    \subitem {Variable}, \hyperpage{24}
+
+  \indexspace
+
+  \item {interp}
+    \subitem {Add}, \hyperpage{11}
+    \subitem {Expr}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{17}
+    \subitem {Num}, \hyperpage{22}
+    \subitem {Variable}, \hyperpage{25}
+
+  \indexspace
+
+  \item {lhs}
+    \subitem {Add}, \hyperpage{12}
+    \subitem {Mult}, \hyperpage{19}
+
+  \indexspace
+
+  \item {MSDScript}, \hyperpage{1}
+  \item {Mult}, \hyperpage{16}
+    \subitem {equals}, \hyperpage{17}
+    \subitem {has\_variable}, \hyperpage{17}
+    \subitem {interp}, \hyperpage{17}
+    \subitem {lhs}, \hyperpage{19}
+    \subitem {Mult}, \hyperpage{17}
+    \subitem {prettyPrint}, \hyperpage{18}
+    \subitem {prettyPrintAt}, \hyperpage{18}
+    \subitem {print}, \hyperpage{18}
+    \subitem {subst}, \hyperpage{19}
+
+  \indexspace
+
+  \item {name}
+    \subitem {Variable}, \hyperpage{26}
+  \item {Num}, \hyperpage{19}
+    \subitem {equals}, \hyperpage{21}
+    \subitem {has\_variable}, \hyperpage{22}
+    \subitem {interp}, \hyperpage{22}
+    \subitem {Num}, \hyperpage{20}
+    \subitem {print}, \hyperpage{22}
+    \subitem {subst}, \hyperpage{22}
+    \subitem {val}, \hyperpage{23}
+
+  \indexspace
+
+  \item {prettyPrint}
+    \subitem {Add}, \hyperpage{11}
+    \subitem {Expr}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{18}
+  \item {prettyPrintAt}
+    \subitem {Add}, \hyperpage{11}
+    \subitem {Expr}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{18}
+  \item {print}
+    \subitem {Add}, \hyperpage{11}
+    \subitem {Expr}, \hyperpage{14}
+    \subitem {Mult}, \hyperpage{18}
+    \subitem {Num}, \hyperpage{22}
+    \subitem {Variable}, \hyperpage{25}
+
+  \indexspace
+
+  \item {subst}
+    \subitem {Add}, \hyperpage{12}
+    \subitem {Expr}, \hyperpage{15}
+    \subitem {Mult}, \hyperpage{19}
+    \subitem {Num}, \hyperpage{22}
+    \subitem {Variable}, \hyperpage{25}
+
+  \indexspace
+
+  \item {to\_pretty\_string}
+    \subitem {Expr}, \hyperpage{15}
+  \item {to\_string}
+    \subitem {Expr}, \hyperpage{15}
+
+  \indexspace
+
+  \item {val}
+    \subitem {Num}, \hyperpage{23}
+  \item {Variable}, \hyperpage{23}
+    \subitem {equals}, \hyperpage{24}
+    \subitem {has\_variable}, \hyperpage{24}
+    \subitem {interp}, \hyperpage{25}
+    \subitem {name}, \hyperpage{26}
+    \subitem {print}, \hyperpage{25}
+    \subitem {subst}, \hyperpage{25}
+    \subitem {Variable}, \hyperpage{24}
+
+\end{theindex}

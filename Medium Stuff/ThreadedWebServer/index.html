@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">  
+        <head>
+                <meta charset="utf-8">
+		<!--<link rel="stylesheet" href="styles.css"/>-->
+                <title> WebSocket Echo </title>
+        </head>
+        <body>
+
+			<h2> WebSocket Echo </h2>
+		<p>Please enter a message to send</p>
+		<label> message: <input id="msg"/></label>
+		<button id="sendBtn"> send </button>
+			<p>This is your echo: </p>
+		<p id="echo">This will be your echo</p>
+
+        </body>
+<script>
+	let ws = new WebSocket("ws://localhost:8080");
+
+	ws.onopen = function () {
+	     console.log("Connection is established");
+	     ws.send("testing");
+	};
+
+	// error listener
+	ws.onerror = function (e) {
+		console.log("error");
+
+	};
+
+	// close listener
+	// ws.onclose = function (e) {
+	// 	console.log(e);
+	// 	console.log("Connection is now closed");
+	// };
+
+	// onmessage to display echo
+	ws.onmessage = function(messageEvent) {
+		console.log( "got a msg: " + messageEvent.data);
+		let echo = document.getElementById("echo")
+		echo.innerHTML = messageEvent.data;
+	};
+
+	let sendBtn = document.getElementById("sendBtn")
+	let msg = document.getElementById("msg");
+
+	sendBtn.addEventListener("click", function () {
+
+		console.log("send clicked");
+		ws.send(msg.value);
+	});
+</script>
+
+
+</html>
